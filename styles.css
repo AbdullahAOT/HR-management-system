@@ -1,0 +1,117 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#websiteHeader{
+    display: flex;
+    flex-direction: row;
+}
+#websiteLogoImage{
+    height:70px;
+    width:70px;
+    margin-top:1%;
+    margin-left:1%;
+}
+#websiteTitle{
+    margin-top:35px;
+    margin-left:30px;
+    font-size: 30px;
+}
+#aboutPageLink{
+    position:fixed;
+    left: 93%;
+    font-size:20px;
+    top:1.5%;
+    background-color: 88001B;
+    padding:0.5%;
+    a{
+        text-decoration: none;
+        color:white;
+    }
+}
+#employeeTableHomePage{
+    border-collapse: collapse;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+    height: 30%;
+    margin:auto;
+    margin-top: 10%;
+    background-color: D48484;
+    tr td{
+        border:1px solid white;
+        border-collapse: collapse;
+        color:white;
+        width:25%;
+    }
+}
+footer{
+    position: fixed;
+    top:90%;
+    width:100%;
+    border-top: 1px solid black;
+    b{
+        font-size: 20px;
+        position: fixed;
+        left: 9%;
+        top:93%;
+    }
+}
+#aboutPageFirstSection{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    img{
+        width:100px;
+        height:100px;
+        border:solid;
+        border-color: 88001B;
+        position:fixed;
+        left: 25%;
+        top:20%;
+    }
+    b{
+        position:fixed;
+        font-size: 30px;
+        left: 35%;
+        top:20%;
+    }
+    p{
+        position:fixed;
+        font-size: 20px;
+        left: 40%;
+        top:25%;
+    }
+    form{
+        background-color: D48484;
+        label{
+            margin-left: 2%;
+            color:white;
+            width:25%;
+        }
+        position: fixed;
+        display: grid;
+        width: 30%;
+        height: 30%;
+        left:35%;
+        top:50%;
+    }
+}
+#aboutPageSecondSection{
+    position:fixed;
+    width: 100%;
+    height: 50%;
+}
+#submitButton{
+    width:20%;
+    height:100%;
+    margin-left: 39%;
+    background-color: 88001B;
+    color: white;
+}
+.userWelcomeMessage{
+    position: fixed;
+    left: 35%;
+    top:20%;
+    font-size: 30px;
+    color:88001B;
+}
