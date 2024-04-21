@@ -41,6 +41,7 @@ Employee.prototype.checkDepartmentError=function(){
     }
 }
 
+/*
 Employee.prototype.render=function(){
     var homePageEmployeeTableRow=document.createElement("tr");
 
@@ -74,5 +75,5 @@ emp4.render();
 emp5.render();
 emp6.render();
 emp7.render();
-
+*/
 
