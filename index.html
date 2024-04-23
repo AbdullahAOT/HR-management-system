@@ -11,27 +11,37 @@
     </head>
     <body>
         <div>
-            <form action="">
-                <label for="">First Name</label>
-                <input type="text">
-                <label for="">Last Name</label>
-                <input type="text">
-                <label for="">Department</label>
-                <select name="" id="">
+            <form action="" id="formInHomePage">
+                <label class="formInputFields" for="">First Name</label>
+                <input id="firstName" class="formInputFields" type="text" required>
+                <label class="formInputFields" for="">Last Name</label>
+                <input id="lastName" class="formInputFields" type="text" required>
+                <label class="formInputFields" for="">Department</label>
+                <select class="formInputFields" name="" id="department">
                     <option value="">Administration</option>
                     <option value="">Marketing</option>
                     <option value="">Development</option>
                     <option value="">Finance</option>
                 </select>
-                <label for="">Level</label>
-                <select name="" id="">
-                    <option value="">Junior</option>
-                    <option value="">Mid-Senior</option>
-                    <option value="">Senior</option>
+                <label class="formInputFields" for="">Level</label>
+                <select class="formInputFields" name="" id="level">
+                    <option value="">junior</option>
+                    <option value="">mid-senior</option>
+                    <option value="">senior</option>
                 </select>
-                <label for="">Image URL</label>
-                <input type="text">
+                <label class="formInputFields" for="">Image URL</label>
+                <input id="imageURL" class="formInputFields" type="text" required>
+                <input value="Submit" class="formInputFields" type="submit" id="formSubmit" required>
             </form>
+        </div>
+        <div>
+            <table id="employeeTableHomePage">
+                <tr>
+                    <td>Employee ID</td>
+                    <td>Full Name</td>
+                    <td>Salary</td>
+                </tr>
+        </table>
         </div>
         <footer>
             <b>&copy; Copyrights for HR Management System company, For more information contact us on +962-790836233</b>
