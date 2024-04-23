@@ -1,3 +1,25 @@
+#formInHomePage{
+    display:grid;
+    width:25%;
+    margin-left:38%;
+}
+.formInputFields{
+    margin-top:5px;
+    color:red;
+    height:30px;
+    border-color: red;
+}
+#formSubmit{
+    margin-left: 34%;
+    position: relative;
+    text-align: center;
+    width:100px;
+    color:white;
+    background-color: red;
+    margin-top: 40px;
+    border: 1px solid red;
+    border-radius: 20px;
+}
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -28,30 +50,35 @@ body{
         color:white;
     }
 }
-#employeeTableHomePage{
-    border-collapse: collapse;
-    font-size: 30px;
-    text-align: center;
-    width: 50%;
-    height: 30%;
-    margin:auto;
-    margin-top: 10%;
-    background-color: D48484;
-    tr td{
-        border:1px solid white;
-        border-collapse: collapse;
-        color:white;
-        width:25%;
+#AdministrationSection, #MarketingSection, #DevelopmentSection, #FinanceSection{
+    p{
+        font-size: 30px;
+        text-align: center;
+    }
+    table{
+        width:18%;
+        height:30%;
+        border: 1px solid red;
+        color:red;
+        display: inline-block;
+        margin: 5px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
 }
+.employeeDivInHomePage{
+    display: inline-flexbox;
+    position: static;
+}
 footer{
-    position: fixed;
+    padding-top:1.5%;
     top:90%;
     width:100%;
     border-top: 1px solid black;
     b{
         font-size: 20px;
-        position: fixed;
         left: 9%;
         top:93%;
     }
