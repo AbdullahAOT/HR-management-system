@@ -42,50 +42,56 @@ Employee.prototype.checkDepartmentError=function(){
 }
 
 Employee.prototype.render=function(){
-    var homePageEmployeeTableRow=document.createElement("tr");
+    var homePageEmployeeTable=document.createElement("table");
+
+    var employeeTableImageRow=document.createElement("tr");
+
+    var imageUrlEntered=document.createElement("img");
+    imageUrlEntered.src=document.getElementById("imageURL").value;
+    imageUrlEntered.textContent=this.imageURL;
+    employeeTableImageRow.appendChild(imageUrlEntered);
+
+    var employeeTableInfoRow=document.createElement("tr");
 
     var tableEmployeeID=document.createElement("td");
     tableEmployeeID.textContent=this.employeeID;
-    homePageEmployeeTableRow.appendChild(tableEmployeeID);
+    employeeTableInfoRow.appendChild(tableEmployeeID);
 
     var tableEmployeeFullName=document.createElement("td");
     tableEmployeeFullName.textContent=this.fullName();
-    homePageEmployeeTableRow.appendChild(tableEmployeeFullName);
+    employeeTableInfoRow.appendChild(tableEmployeeFullName);
 
     var tableEmployeeSalary=document.createElement("td");
-    tableEmployeeSalary.textContent=Math.floor(this.calculateSalary());
-    homePageEmployeeTableRow.appendChild(tableEmployeeSalary);
+    tableEmployeeSalary.textContent=Math.floor(this.calculateSalary())+" Dinars";
+    employeeTableInfoRow.appendChild(tableEmployeeSalary);
 
-    document.getElementById("employeeTableHomePage").appendChild(homePageEmployeeTableRow);
+    homePageEmployeeTable.appendChild(employeeTableInfoRow);
+    homePageEmployeeTable.appendChild(employeeTableImageRow);
+
+    if (this.department.toLowerCase() == "administration") {
+        document.getElementById("AdministrationSection").appendChild(homePageEmployeeTable);
+    } else if (this.department.toLowerCase() == "marketing") {
+        document.getElementById("MarketingSection").appendChild(homePageEmployeeTable);
+    } else if (this.department.toLowerCase() == "development") {
+        document.getElementById("DevelopmentSection").appendChild(homePageEmployeeTable);
+    } else {
+        document.getElementById("FinanceSection").appendChild(homePageEmployeeTable);
+    }
 }
 
-var emp1 = new Employee(1000, 'Ghazi', 'Samer', 'Administration', 'senior', 'example.com/ghazisamer.jpg');
-var emp2 = new Employee(1001, 'Lana', 'Ali', 'Finance', 'senior', 'example.com/lanaali.jpg');
-var emp3 = new Employee(1002, 'Tamara', 'Ayoub', 'Marketing', 'senior', 'example.com/tamaraayoub.jpg');
-var emp4 = new Employee(1003, 'Safi', 'Walid', 'Administration', 'mid-senior', 'example.com/safiwalid.jpg');
-var emp5 = new Employee(1004, 'Omar', 'Zaid', 'Development', 'senior', 'example.com/omarzaid.jpg');
-var emp6 = new Employee(1005, 'Rana', 'Saleh', 'Development', 'junior', 'example.com/ranasaleh.jpg');
-var emp7 = new Employee(1006, 'Hadi', 'Ahmad', 'Finance', 'mid-senior', 'example.com/hadiamad.jpg');
-
-emp1.render();
-emp2.render();
-emp3.render();
-emp4.render();
-emp5.render();
-emp6.render();
-emp7.render();
+var IdCounter=999;
 
 const submitButton=document.getElementById("formSubmit");
 submitButton.addEventListener('click', function (event){
     event.preventDefault();
-    const firstNameFromSubmit=document.getElementById("firstName");
-    const LastNameFromSubmit=document.getElementById("LastName");
-    const DepartmentFromSubmit=document.getElementById("department");
-    const levelFromSubmit=document.getElementById("level");
-    const imageFromSubmit=document.getElementById("imageURL");
-    var emp= new Employee(1,firstNameFromSubmit,LastNameFromSubmit,DepartmentFromSubmit,
+    const firstNameFromSubmit=document.getElementById("firstName").value;
+    const lastNameFromSubmit=document.getElementById("lastName").value;
+    const departmentFromSubmit=document.getElementById("department").value;
+    const levelFromSubmit=document.getElementById("level").value;
+    const imageFromSubmit=document.getElementById("imageURL").value;
+    const IdFromSubmit=IdCounter+1;
+    IdCounter+=1;
+    var empAdd= new Employee(IdFromSubmit,firstNameFromSubmit,lastNameFromSubmit,departmentFromSubmit,
     levelFromSubmit,imageFromSubmit);
-    emp.render();
+    empAdd.render();
 });
-
-

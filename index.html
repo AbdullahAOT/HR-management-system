@@ -12,36 +12,39 @@
     <body>
         <div>
             <form action="" id="formInHomePage">
-                <label class="formInputFields" for="">First Name</label>
+                <label class="formInputFields" for="firstName">First Name</label>
                 <input id="firstName" class="formInputFields" type="text" required>
-                <label class="formInputFields" for="">Last Name</label>
+                <label class="formInputFields" for="lastName">Last Name</label>
                 <input id="lastName" class="formInputFields" type="text" required>
-                <label class="formInputFields" for="">Department</label>
-                <select class="formInputFields" name="" id="department">
-                    <option value="">Administration</option>
-                    <option value="">Marketing</option>
-                    <option value="">Development</option>
-                    <option value="">Finance</option>
+                <label class="formInputFields" for="department">Department</label>
+                <select class="formInputFields" name="department" id="department">
+                    <option value="Administration">Administration</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
                 </select>
-                <label class="formInputFields" for="">Level</label>
-                <select class="formInputFields" name="" id="level">
-                    <option value="">junior</option>
-                    <option value="">mid-senior</option>
-                    <option value="">senior</option>
+                <label class="formInputFields" for="level">Level</label>
+                <select class="formInputFields" name="level" id="level">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-senior">Mid-senior</option>
+                    <option value="Senior">Senior</option>
                 </select>
-                <label class="formInputFields" for="">Image URL</label>
+                <label class="formInputFields" for="imageURL">Image URL</label>
                 <input id="imageURL" class="formInputFields" type="text" required>
                 <input value="Submit" class="formInputFields" type="submit" id="formSubmit" required>
             </form>
         </div>
-        <div>
-            <table id="employeeTableHomePage">
-                <tr>
-                    <td>Employee ID</td>
-                    <td>Full Name</td>
-                    <td>Salary</td>
-                </tr>
-        </table>
+        <div id="AdministrationSection" class="employeeDivInHomePage">
+            <p>Administration Employees</p>
+        </div>
+        <div id="MarketingSection" class="employeeDivInHomePage">
+            <p>Marketing Employees</p>
+        </div>
+        <div id="DevelopmentSection" class="employeeDivInHomePage">
+            <p>Development Employees</p>
+        </div>
+        <div id="FinanceSection" class="employeeDivInHomePage">
+            <p>Finance Employees</p>
         </div>
         <footer>
             <b>&copy; Copyrights for HR Management System company, For more information contact us on +962-790836233</b>
