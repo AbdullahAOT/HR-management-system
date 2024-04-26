@@ -47,22 +47,22 @@ Employee.prototype.render=function(){
     var employeeTableImageRow=document.createElement("tr");
 
     var imageUrlEntered=document.createElement("img");
-    imageUrlEntered.src=document.getElementById("imageURL").value;
+    imageUrlEntered.src=this.imageURL;
     imageUrlEntered.textContent=this.imageURL;
     employeeTableImageRow.appendChild(imageUrlEntered);
 
     var employeeTableInfoRow=document.createElement("tr");
 
     var tableEmployeeID=document.createElement("td");
-    tableEmployeeID.textContent=this.employeeID;
+    tableEmployeeID.textContent="Id:" + this.employeeID;
     employeeTableInfoRow.appendChild(tableEmployeeID);
 
     var tableEmployeeFullName=document.createElement("td");
-    tableEmployeeFullName.textContent=this.fullName();
+    tableEmployeeFullName.textContent="Name:" + this.fullName();
     employeeTableInfoRow.appendChild(tableEmployeeFullName);
 
     var tableEmployeeSalary=document.createElement("td");
-    tableEmployeeSalary.textContent=Math.floor(this.calculateSalary())+" Dinars";
+    tableEmployeeSalary.textContent="Salary:" + Math.floor(this.calculateSalary())+" Dinars";
     employeeTableInfoRow.appendChild(tableEmployeeSalary);
 
     homePageEmployeeTable.appendChild(employeeTableInfoRow);
@@ -79,7 +79,7 @@ Employee.prototype.render=function(){
     }
 }
 
-var IdCounter=999;
+var IdCounter=1006;
 
 const submitButton=document.getElementById("formSubmit");
 submitButton.addEventListener('click', function (event){
@@ -95,3 +95,15 @@ submitButton.addEventListener('click', function (event){
     levelFromSubmit,imageFromSubmit);
     empAdd.render();
 });
+
+// Create hardcoded employee objects
+var emp1 = new Employee(1000, "Ghazi", "Samer", "Administration", "Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Ghazi.jpg?raw=true");
+var emp2 = new Employee(1001, "Lana", "Ali", "Finance", "Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Lana.jpg?raw=true");
+var emp3 = new Employee(1002, "Tamara", "Ayoub", "Marketing", "Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Tamara.jpg?raw=true");
+var emp4 = new Employee(1003, "Safi", "Walid", "Administration", "Mid-Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Safi.jpg?raw=true");
+var emp5 = new Employee(1004, "Omar", "Zaid", "Development", "Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Omar.jpg?raw=true");
+var emp6 = new Employee(1005, "Rana", "Saleh", "Development", "Junior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Rana.jpg?raw=true");
+var emp7 = new Employee(1006, "Hadi", "Ahmad", "Finance", "Mid-Senior", "https://github.com/LTUC/amman-prep-d16/blob/main/Class-08/lab/assets/Hadi.jpg?raw=true");
+
+// Render each employee in a single line
+emp1.render(); emp2.render(); emp3.render(); emp4.render(); emp5.render(); emp6.render(); emp7.render();
