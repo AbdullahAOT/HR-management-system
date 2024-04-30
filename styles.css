@@ -74,7 +74,7 @@ body{
 }
 footer{
     padding-top:1.5%;
-    top:90%;
+    
     width:100%;
     border-top: 1px solid black;
     b{
@@ -141,4 +141,15 @@ footer{
     top:20%;
     font-size: 30px;
     color:88001B;
+}
+
+#accountingPageContainer{
+    div{
+        margin: 5%;
+        table td{
+            border:1px solid red;
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+    }
 }
